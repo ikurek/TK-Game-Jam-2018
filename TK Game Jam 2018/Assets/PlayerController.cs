@@ -3,13 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-    
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag.Equals("World"))
-        {
-            Debug.Log("collide");
-            collision.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+
+    float moveSpeed = 10.0f;
+    public bool grounded = true;
+    public float jumpPower = 2.0f;
+    Vector2 velocity;
+
+
+    void Update() {
+
+        if(Input.GetKey(KeyCode.Space)) {
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(velocity.x, jumpPower));
         }
+
+     }
+
+
+    void FixedUpdate() {
+        velocity = gameObject.GetComponent<Rigidbody2D>().velocity;
+        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(Input.GetAxis("Horizontal")*moveSpeed, velocity.y);
     }
+
 }
