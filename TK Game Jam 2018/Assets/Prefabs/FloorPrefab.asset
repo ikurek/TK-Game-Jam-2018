@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62caa26d40f053448b0118ab70aaf3d4, type: 3}
-  m_Name: New Prefab Tile
+  m_Name: FloorPrefab
   m_EditorClassIdentifier: 
   Sprite: {fileID: 21300000, guid: a8abab19428c5ec45ad36627715dc7ac, type: 3}
   Prefab: {fileID: 1350714067937266, guid: c519e5292dd1e3c48b52774c2199418f, type: 2}
