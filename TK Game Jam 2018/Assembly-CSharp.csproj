@@ -52,10 +52,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Dupaskrypt.cs" />
-     <Compile Include="Assets\Player\GroundChecker.cs" />
      <Compile Include="Assets\Player\Platformer2DUserControl.cs" />
      <Compile Include="Assets\Player\PlatformerCharacter2D.cs" />
-     <Compile Include="Assets\Player\PlayerController.cs" />
      <Compile Include="Assets\PrefabTile.cs" />
      <Compile Include="Assets\TrapController.cs" />
      <Compile Include="Assets\WaveController.cs" />
