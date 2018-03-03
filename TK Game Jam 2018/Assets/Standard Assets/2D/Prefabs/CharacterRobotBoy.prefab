@@ -77,8 +77,8 @@ Transform:
   m_Children:
   - {fileID: 400000}
   - {fileID: 400004}
-  - {fileID: 4558997098376994}
   - {fileID: 4530536964888910}
+  - {fileID: 4558997098376994}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -127,9 +127,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.02, y: -0.45}
+  m_Offset: {x: -0.01, y: -0.45}
   serializedVersion: 2
-  m_Radius: 0.15861586
+  m_Radius: 0.08191945
 --- !u!95 &9500000
 Animator:
   serializedVersion: 3
@@ -210,7 +210,7 @@ SpriteRenderer:
   m_SortingLayerID: -1783731295
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 8fb98a6035269e64a998f9b56828fc4f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01eadc980d6614081b6f72e868469c89, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -278,7 +278,7 @@ Transform:
   m_LocalScale: {x: 0.5644829, y: 0.56448364, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4558997098376994
 Transform:
@@ -291,7 +291,7 @@ Transform:
   m_LocalScale: {x: 0.11289658, y: 0.11289672, z: 2.87168}
   m_Children: []
   m_Father: {fileID: 400002}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &20893399998455310
 Camera:
@@ -356,8 +356,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.020000007, y: -0.052642163}
-  m_Size: {x: 0.3172317, y: 1.0417603}
+  m_Offset: {x: -0.0084957, y: 0.020219542}
+  m_Size: {x: 0.16383886, y: 1.0187516}
   m_Direction: 0
 --- !u!81 &81858931149755110
 AudioListener:
