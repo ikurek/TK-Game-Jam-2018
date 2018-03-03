@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:TK Game Jam 2018/Assets/Prefabs/Level2.prefab.meta
+guid: 08394b2deb3203a48a77c158330c509e
+timeCreated: 1520097914
+=======
 guid: d9b157d754201974ebc875e2ec84ea87
 timeCreated: 1520079018
+>>>>>>> a869c667c5c8c2514836654e2e0533b0890aaeeb:TK Game Jam 2018/Assets/Prefabs/Grid.prefab.meta
 licenseType: Free
 NativeFormatImporter:
   externalObjects: {}
