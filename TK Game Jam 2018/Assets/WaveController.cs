@@ -86,7 +86,7 @@ public class WaveController : MonoBehaviour {
                 if(collision.transform.parent.tag == "Blue") {
                     light(gmo);
                     //addColoredFilter(gmo, blueFilter);
-                    StartCoroutine(ApplyFilter(gmo, Color.blue));
+                    StartCoroutine(ApplyFilter(gmo, Color.magenta));
                 }
 
             } else {
