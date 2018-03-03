@@ -7,6 +7,7 @@ public class WaveController : MonoBehaviour {
     public float waveVelocity = 0.2f;
     public float initialWaveDimension = 0.01f;
     public float maxWaveDimension = 8;
+    [Range(0f, 3f)]
     public float waveDelay = 0.7f;
 
     [Space]
@@ -17,9 +18,6 @@ public class WaveController : MonoBehaviour {
     public float velocityFadeIn = 0.2f;
     public float waveFadeOutVelocity = 0.022f;
 
-    private SpriteRenderer spr;
-    private bool clap = false;
-
     [Space]
 
     public Sprite waveRed;
@@ -29,13 +27,18 @@ public class WaveController : MonoBehaviour {
 
     [Range(0f, 1f)]
     public float filterIntensity = 0.4f;
-    public Sprite redFilter;
-    public Sprite blueFilter;
+
+    [Space]
+
+	public AudioSource playerAudioSrc;
 
     private static Dictionary<int, IEnumerator> hashMapCoroutineIn = new Dictionary<int, IEnumerator>();
     private static Dictionary<int, IEnumerator> hashMapCoroutineOut = new Dictionary<int, IEnumerator>();
 
-	public AudioSource playerAudioSrc;
+    private bool clap = false;
+    public bool enableWave = true;
+
+    private SpriteRenderer spr;
 
     private void Start()
     {
@@ -46,27 +49,28 @@ public class WaveController : MonoBehaviour {
     void Update()
     {
         
-        if (Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.V))
+        if ((Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.V)) && enableWave)
         {
-			playerAudioSrc.Play ();
+            playerAudioSrc.Play();
             if(Input.GetKey(KeyCode.C))spr.sprite = waveRed;
             if (Input.GetKey(KeyCode.V)) spr.sprite = waveBlue;
             resetWaveDimension();
             clap = true;
             spr.enabled = true;
+            enableWave = false;
+            StartCoroutine(ReenableWave());
         }
 		if (clap) {
 			SendClapWave ();
 
 		}
-
     }
 
-    /*private IEnumerator ReenableWave()
+    private IEnumerator ReenableWave()
     {
         yield return new WaitForSeconds(waveDelay);
         enableWave = true;
-    }*/
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
