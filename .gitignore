@@ -28,8 +28,6 @@ sysinfo.txt
 *.pidb
 .DS_Store
 
-
-
 ###
 # OS generated
 ###
@@ -41,4 +39,3 @@ sysinfo.txt
 Icon?
 ehthumbs.db
 Thumbs.db
-*.meta
