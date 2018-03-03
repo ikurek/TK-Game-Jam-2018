@@ -8,14 +8,21 @@ public class PlayerController : MonoBehaviour {
     public bool grounded = true;
     public bool isRight = true;
     public float jumpPower = 20.0f;
-    Vector2 velocity;
+
+    private Rigidbody2D rb2d;
+
+    void Start()
+    {
+        rb2d = GetComponent<Rigidbody2D>();
+    }
 
 
     void Update() {
         
         // Jumping
         if(Input.GetKey(KeyCode.Space) && grounded) {
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(velocity.x, jumpPower));
+            rb2d.AddForce(new Vector2(0, jumpPower), ForceMode2D.Impulse);
+            Debug.Log("jump");
         }
 
      }
@@ -23,8 +30,7 @@ public class PlayerController : MonoBehaviour {
 
     void FixedUpdate() {
         // Character Movement
-        velocity = gameObject.GetComponent<Rigidbody2D>().velocity;
-        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(Input.GetAxis("Horizontal")*moveSpeed, velocity.y);
+        rb2d.velocity = new Vector2(Input.GetAxis("Horizontal")*moveSpeed, rb2d.velocity.y);
 
         // Fliping sprites
         if(Input.GetAxis("Horizontal") > 0 && !isRight) {
@@ -38,13 +44,6 @@ public class PlayerController : MonoBehaviour {
             Debug.Log("Left");
         }
 
-    }
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-		if(collision.collider.tag == "World") {
-			gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-		}
     }
 
     void flipCharacter(bool flip) {

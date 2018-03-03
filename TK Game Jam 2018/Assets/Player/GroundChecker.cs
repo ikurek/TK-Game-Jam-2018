@@ -15,16 +15,16 @@ public class GroundChecker : MonoBehaviour {
 		
 	}
 
-	void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collider)
     {
-		if(collision.collider.tag == "World") {
+        if(collider.tag == "World") {
 			playerController.grounded = true;
 		}
     }
 
-	void OnCollisionExit2D(Collision2D collision) {
+    void OnTriggerExit2D(Collider2D collider) {
 
-		if(collision.collider.tag == "World") {
+        if(collider.tag == "World") {
 		playerController.grounded = false;
 		}
 	}
