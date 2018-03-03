@@ -59,7 +59,6 @@
      <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
      <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
      <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
-     <Compile Include="Assets\Karol Scripts\FinishScript.cs" />
      <Compile Include="Assets\Karol Scripts\LevelManager.cs" />
      <Compile Include="Assets\Karol Scripts\Loader.cs" />
      <Compile Include="Assets\ParticleColliderController.cs" />
