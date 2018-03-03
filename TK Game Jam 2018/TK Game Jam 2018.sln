@@ -1,11 +1,11 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{5A9DA4A3-BFD4-6EC8-E905-B62B375C5856}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TK Game Jam 2018", "Assembly-CSharp-firstpass.csproj", "{5A9DA4A3-BFD4-6EC8-E905-B62B375C5856}"
 EndProject
-Project("{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{F1E833D7-1671-E449-4860-A3B701FE6E1F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TK Game Jam 2018", "Assembly-CSharp.csproj", "{F1E833D7-1671-E449-4860-A3B701FE6E1F}"
 EndProject
-Project("{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1}") = "Assembly-CSharp-Editor-firstpass", "Assembly-CSharp-Editor-firstpass.csproj", "{C50DD7E9-E5DA-755B-2D02-3B070EBB304F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TK Game Jam 2018", "Assembly-CSharp-Editor-firstpass.csproj", "{C50DD7E9-E5DA-755B-2D02-3B070EBB304F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
