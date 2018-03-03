@@ -14,6 +14,7 @@ public class WaveController : MonoBehaviour {
     public float velocityFadeOut = 0.1f;
     public float delayFadeIn = 0f;
     public float velocityFadeIn = 0.2f;
+    public float waveFadeOutVelocity = 0.022f;
 
     private SpriteRenderer spr;
     private bool clap = false;
@@ -63,9 +64,11 @@ public class WaveController : MonoBehaviour {
         {
             resetWaveDimension();
             clap = false;
+            spr.color = new Color(spr.color.r, spr.color.g, spr.color.b, 1);
             spr.enabled = false;
         }else{
             transform.localScale += new Vector3(waveVelocity, waveVelocity, 0);
+            spr.color = new Color(spr.color.r, spr.color.g, spr.color.b, spr.color.a - waveFadeOutVelocity);
         }
     }
 
