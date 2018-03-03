@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/shitty scene.unity
+    guid: 9f04a55de51214ec4b14388858586124
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: 43ed41e913c844ffb95b9ca5c9c58b86
