@@ -40,6 +40,13 @@ public class PlayerController : MonoBehaviour {
 
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+		if(collision.collider.tag == "World") {
+			gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+		}
+    }
+
     void flipCharacter(bool flip) {
         gameObject.GetComponent<SpriteRenderer>().flipX = flip;
     }
