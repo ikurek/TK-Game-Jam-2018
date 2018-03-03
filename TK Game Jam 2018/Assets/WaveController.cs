@@ -59,6 +59,20 @@ public class WaveController : MonoBehaviour {
         GameObject gmo = collision.gameObject;
         if (gmo.tag.Equals("World") && clap)
         {
+
+            if(spr.sprite == waveBlue) {
+                if(collision.transform.parent.tag == "Blue") {
+                    light(gmo);
+                }
+            } else {
+                if(collision.transform.parent.tag == "Red") {
+                    light(gmo);
+                }
+            }
+        }
+    }
+
+    private void light(GameObject gmo) {
             IEnumerator toStop;
             hashMapCoroutineIn.TryGetValue(gmo.GetInstanceID(),out toStop);
             if(toStop != null)StopCoroutine(toStop);
@@ -73,7 +87,6 @@ public class WaveController : MonoBehaviour {
             IEnumerator fadeOutCoroutine = FadeOutAfterTime(gmo);
             hashMapCoroutineOut.Add(gmo.GetInstanceID(), fadeOutCoroutine);
             StartCoroutine(fadeOutCoroutine);
-        }
     }
 
     private void resetWaveDimension()
