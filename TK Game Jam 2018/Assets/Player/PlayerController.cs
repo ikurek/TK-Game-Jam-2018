@@ -20,8 +20,9 @@ public class PlayerController : MonoBehaviour {
     void Update() {
         
         // Jumping
-        if(Input.GetKey(KeyCode.Space) && grounded) {
-            rb2d.AddForce(new Vector2(0, jumpPower), ForceMode2D.Impulse);
+        if(Input.GetKeyDown(KeyCode.Space) && grounded) {
+            //rb2d.AddForce(new Vector2(0, jumpPower), ForceMode2D.Impulse);
+            rb2d.velocity = new Vector2(rb2d.velocity.x, jumpPower);
             Debug.Log("jump");
         }
 
