@@ -8,6 +8,8 @@ TagManager:
   - Things
   - Decorations
   - Traps
+  - Red
+  - Blue
   layers:
   - Default
   - TransparentFX
