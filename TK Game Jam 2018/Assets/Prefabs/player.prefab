@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4252360851626884}
   - component: {fileID: 212519107791906292}
   - component: {fileID: 58213190534626624}
-  - component: {fileID: 114796836215408074}
   - component: {fileID: 114728595876797586}
   m_Layer: 0
   m_Name: wave
@@ -131,7 +130,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1214539804314466}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.8957615, y: 6.35, z: 0}
+  m_LocalPosition: {x: -3.693991, y: 2.3739543, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4252360851626884}
@@ -160,7 +159,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 16.393919
+  orthographic size: 4.93
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -330,27 +329,6 @@ MonoBehaviour:
   waveFadeOutVelocity: 0.022
   waveRed: {fileID: 0}
   waveBlue: {fileID: 0}
---- !u!114 &114796836215408074
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1023941223505822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6578adba22c964116977185c1b4f5045, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waveVelocity: 0.35
-  initialWaveDimension: 0.01
-  maxWaveDimension: 8
-  delayFadeOut: 1
-  velocityFadeOut: 0.001
-  delayFadeIn: 0
-  velocityFadeIn: 0.001
-  waveFadeOutVelocity: 0.022
-  waveRed: {fileID: 21300000, guid: c625ec56a33d9aa40ac5a023f25da394, type: 3}
-  waveBlue: {fileID: 21300000, guid: fef9c3f3ca726466fa0709a43600a9c8, type: 3}
 --- !u!124 &124914104593241152
 Behaviour:
   m_ObjectHideFlags: 1
