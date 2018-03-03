@@ -8,8 +8,6 @@ public class LevelManager : MonoBehaviour
 	public static LevelManager instance = null; //its a singleton 
 	public float levelStartDelay = 5f; //delay of restarting game from text screen
 
-
-
 	private GameObject levelImage;
 	private bool doingSetup; //prevent moving while on text screen
 
@@ -22,13 +20,8 @@ public class LevelManager : MonoBehaviour
 
 		DontDestroyOnLoad(gameObject);
 		
-		InitGame();
 	}
 
-	void InitGame()
-	{
-		
-	}
 	
 	// Use this for initialization
 	void Start () {

@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/shitty scene.unity
     guid: 9f04a55de51214ec4b14388858586124
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/43ed41e913c844ffb95b9ca5c9c58b86
+    guid: 43ed41e913c844ffb95b9ca5c9c58b86
   - enabled: 1
     path: Assets/Scenes/Level1.unity
-    guid: 43ed41e913c844ffb95b9ca5c9c58b86
+    guid: c0d9f97e1c0aa4b19acd58208471c04d
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 17882097271971d41beba62471711aa2

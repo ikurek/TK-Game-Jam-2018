@@ -11,9 +11,9 @@ using UnityEngine.SceneManagement;
 
 public class Loader : MonoBehaviour
 {
-
+	public int levelCounter = 0;
 	public Button buttonComponent;
-	public GameObject levelManager;
+	public GameObject levelManager ;
 
 	private void Awake()
 	{
@@ -21,6 +21,7 @@ public class Loader : MonoBehaviour
 		{
 			Instantiate(levelManager);
 		}
+		Debug.Log(" instancja sceny istnieje");
 	}
 
 	// Use this for initialization
@@ -39,7 +40,8 @@ public class Loader : MonoBehaviour
 		if (GUI.Button(new Rect(10, 10, 100, 30), "Change to Level 1"))
 		{
 			Debug.Log("Scene1 loading: ");
-			SceneManager.LoadScene("Level1", LoadSceneMode.Additive);
+			levelCounter++;
+			SceneManager.LoadScene("Level" + levelCounter, LoadSceneMode.Additive);
 		}
 	}
 }
