@@ -45,6 +45,8 @@ public class WaveController : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
+        Debug.Log("Colided");
         GameObject gmo = collision.gameObject;
         if (gmo.tag.Equals("World"))
         {

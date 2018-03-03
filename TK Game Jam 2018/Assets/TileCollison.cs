@@ -25,7 +25,9 @@ public class TileCollison : MonoBehaviour {
             {
                 hitPosition.x = hit.point.x - 0.01f * hit.normal.x;
                 hitPosition.y = hit.point.y - 0.01f * hit.normal.y;
+                Debug.Log(tilemap.GetColor(tilemap.WorldToCell(hitPosition)));
                 tilemap.SetColor(tilemap.WorldToCell(hitPosition), Color.red);
+                Debug.Log(tilemap.GetColor(tilemap.WorldToCell(hitPosition)));
                 //tilemap.GetComponent<SpriteRenderer>().color = Color.black
             }
         }
