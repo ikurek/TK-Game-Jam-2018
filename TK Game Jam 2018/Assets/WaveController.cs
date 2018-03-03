@@ -7,6 +7,7 @@ public class WaveController : MonoBehaviour {
     public float waveVelocity = 0.2f;
     public float initialWaveDimension = 0.01f;
     public float maxWaveDimension = 8;
+    [Range(0f, 3f)]
     public float waveDelay = 0.7f;
 
     [Space]
@@ -17,26 +18,44 @@ public class WaveController : MonoBehaviour {
     public float velocityFadeIn = 0.2f;
     public float waveFadeOutVelocity = 0.022f;
 
-    private SpriteRenderer spr;
-    private bool clap = false;
-    private bool enableWave = true;
-
     [Space]
 
     public Sprite waveRed;
     public Sprite waveBlue;
 
+    [Space]
+
+    [Range(0f, 1f)]
+    public float filterIntensity = 0.4f;
+
+    [Space]
+
+	public AudioSource playerAudioSrc;
+
+    private static Dictionary<int, IEnumerator> hashMapCoroutineIn = new Dictionary<int, IEnumerator>();
+    private static Dictionary<int, IEnumerator> hashMapCoroutineOut = new Dictionary<int, IEnumerator>();
+
+    private bool clap = false;
+    public bool enableWave = true;
+
+    private SpriteRenderer spr;
+
+	private Animator myAnim;
+
     private void Start()
     {
         spr = gameObject.GetComponent<SpriteRenderer>();
         spr.enabled = false;
+		myAnim = gameObject.GetComponentInParent<Animator> ();
     }
 
     void Update()
     {
         
-        if (Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.V) && enableWave)
+        if ((Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.V)) && enableWave)
         {
+            playerAudioSrc.Play();
+			myAnim.SetTrigger ("ignite");
             if(Input.GetKey(KeyCode.C))spr.sprite = waveRed;
             if (Input.GetKey(KeyCode.V)) spr.sprite = waveBlue;
             resetWaveDimension();
@@ -45,7 +64,10 @@ public class WaveController : MonoBehaviour {
             enableWave = false;
             StartCoroutine(ReenableWave());
         }
-        if(clap)SendClapWave(); 
+		if (clap) {
+			SendClapWave ();
+
+		}
     }
 
     private IEnumerator ReenableWave()
@@ -59,9 +81,55 @@ public class WaveController : MonoBehaviour {
         GameObject gmo = collision.gameObject;
         if (gmo.tag.Equals("World") && clap)
         {
-            StartCoroutine(FadeInAfterTime(gmo));
-            StartCoroutine(FadeOutAfterTime(gmo));
+
+            if(spr.sprite == waveBlue) {
+                if(collision.transform.parent.tag == "Blue") {
+                    light(gmo);
+                    //addColoredFilter(gmo, blueFilter);
+                    StartCoroutine(ApplyFilter(gmo, Color.blue));
+                }
+
+            } else {
+                if(collision.transform.parent.tag == "Red") {
+                    light(gmo);
+                    //addColoredFilter(gmo, redFilter);
+                    StartCoroutine(ApplyFilter(gmo, Color.red));
+                }
+            }
         }
+    }
+
+    private void addColoredFilter(GameObject gmo, Color color){
+        
+    }
+
+    IEnumerator ApplyFilter(GameObject gmo, Color color)
+    {
+        float timeToStart = Time.time;
+        float filterCount = 0;
+        while (filterCount < filterIntensity)
+        {
+            gmo.GetComponent<SpriteRenderer>().color = Color.Lerp(gmo.GetComponent<SpriteRenderer>().color, color, timeToStart);
+            filterCount += 0.1f;
+            yield return null;
+        }
+    }
+
+    private void light(GameObject gmo) {
+            IEnumerator toStop;
+            hashMapCoroutineIn.TryGetValue(gmo.GetInstanceID(),out toStop);
+            if(toStop != null)StopCoroutine(toStop);
+            hashMapCoroutineIn.Remove(gmo.GetInstanceID());
+            IEnumerator fadeInCoroutine = FadeInAfterTime(gmo);
+            hashMapCoroutineIn.Add(gmo.GetInstanceID(),fadeInCoroutine);
+            StartCoroutine(fadeInCoroutine);
+
+            hashMapCoroutineOut.TryGetValue(gmo.GetInstanceID(), out toStop);
+            if (toStop != null)StopCoroutine(toStop);
+            hashMapCoroutineOut.Remove(gmo.GetInstanceID());
+            IEnumerator fadeOutCoroutine = FadeOutAfterTime(gmo);
+            hashMapCoroutineOut.Add(gmo.GetInstanceID(), fadeOutCoroutine);
+            StartCoroutine(fadeOutCoroutine);
     }
 
     private void resetWaveDimension()
@@ -92,6 +160,7 @@ public class WaveController : MonoBehaviour {
         {
             sprHide.color = new Color(clr.r, clr.g, clr.b, clr.a -= velocityFadeOut);
         }
+        hashMapCoroutineOut.Remove(gameObjectToHide.GetInstanceID());
     }
 
     private IEnumerator FadeInAfterTime(GameObject gameObjectToHide)
@@ -105,5 +174,6 @@ public class WaveController : MonoBehaviour {
         {
             sprHide.color = new Color(clr.r, clr.g, clr.b, clr.a += velocityFadeIn);
         }
+        hashMapCoroutineIn.Remove(gameObjectToHide.GetInstanceID());
     }
 }
