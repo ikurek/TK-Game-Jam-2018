@@ -25,6 +25,13 @@ public class WaveController : MonoBehaviour {
     public Sprite waveRed;
     public Sprite waveBlue;
 
+    [Space]
+
+    [Range(0f, 1f)]
+    public float filterIntensity = 0.4f;
+    public Sprite redFilter;
+    public Sprite blueFilter;
+
     private static Dictionary<int, IEnumerator> hashMapCoroutineIn = new Dictionary<int, IEnumerator>();
     private static Dictionary<int, IEnumerator> hashMapCoroutineOut = new Dictionary<int, IEnumerator>();
 
@@ -63,12 +70,33 @@ public class WaveController : MonoBehaviour {
             if(spr.sprite == waveBlue) {
                 if(collision.transform.parent.tag == "Blue") {
                     light(gmo);
+                    //addColoredFilter(gmo, blueFilter);
+                    StartCoroutine(ApplyFilter(gmo, Color.blue));
                 }
+
             } else {
                 if(collision.transform.parent.tag == "Red") {
                     light(gmo);
+                    //addColoredFilter(gmo, redFilter);
+                    StartCoroutine(ApplyFilter(gmo, Color.red));
                 }
             }
+        }
+    }
+
+    private void addColoredFilter(GameObject gmo, Color color){
+        
+    }
+
+    IEnumerator ApplyFilter(GameObject gmo, Color color)
+    {
+        float timeToStart = Time.time;
+        float filterCount = 0;
+        while (filterCount < filterIntensity)
+        {
+            gmo.GetComponent<SpriteRenderer>().color = Color.Lerp(gmo.GetComponent<SpriteRenderer>().color, color, timeToStart);
+            filterCount += 0.1f;
+            yield return null;
         }
     }
 
