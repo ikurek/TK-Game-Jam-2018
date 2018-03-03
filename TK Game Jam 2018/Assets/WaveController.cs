@@ -46,7 +46,7 @@ public class WaveController : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject gmo = collision.gameObject;
-        if (gmo.tag.Equals("World"))
+        if (gmo.tag.Equals("World") && clap)
         {
             StartCoroutine(FadeInAfterTime(gmo));
             StartCoroutine(FadeOutAfterTime(gmo));
