@@ -1,12 +1,11 @@
 fileFormatVersion: 2
-guid: cd35be634c1914a8a9b67c228d7581c1
-timeCreated: 1520090804
+guid: 8be21b05352924cac96e32bcdf7261dc
+timeCreated: 1520095883
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: player_walk_0
-    21300002: player_walk_1
-    21300004: player_walk_2
+    21300000: player_jump_0
+    21300002: player_jump_1
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -83,7 +82,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_walk_0
+      name: player_jump_0
       rect:
         serializedVersion: 2
         x: 0
@@ -97,24 +96,10 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: player_walk_1
+      name: player_jump_1
       rect:
         serializedVersion: 2
         x: 15
-        y: 0
-        width: 15
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: player_walk_2
-      rect:
-        serializedVersion: 2
-        x: 30
         y: 0
         width: 15
         height: 36
