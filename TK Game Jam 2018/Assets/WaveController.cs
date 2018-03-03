@@ -7,6 +7,7 @@ public class WaveController : MonoBehaviour {
     public float waveVelocity = 0.2f;
     public float initialWaveDimension = 0.01f;
     public float maxWaveDimension = 8;
+    public float waveDelay = 0.7f;
 
     [Space]
 
@@ -18,6 +19,7 @@ public class WaveController : MonoBehaviour {
 
     private SpriteRenderer spr;
     private bool clap = false;
+    private bool enableWave = true;
 
     [Space]
 
@@ -33,15 +35,23 @@ public class WaveController : MonoBehaviour {
     void Update()
     {
         
-        if (Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.V))
+        if (Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.V) && enableWave)
         {
             if(Input.GetKey(KeyCode.C))spr.sprite = waveRed;
             if (Input.GetKey(KeyCode.V)) spr.sprite = waveBlue;
             resetWaveDimension();
             clap = true;
             spr.enabled = true;
+            enableWave = false;
+            StartCoroutine(ReenableWave());
         }
         if(clap)SendClapWave(); 
+    }
+
+    private IEnumerator ReenableWave()
+    {
+        yield return new WaitForSeconds(waveDelay);
+        enableWave = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
