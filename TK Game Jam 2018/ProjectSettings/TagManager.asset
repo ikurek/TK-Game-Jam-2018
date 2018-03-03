@@ -7,6 +7,7 @@ TagManager:
   - World
   - Things
   - Decorations
+  - Traps
   layers:
   - Default
   - TransparentFX
