@@ -171,7 +171,28 @@ Prefab:
       propertyPath: m_Size.x
       value: 0.17934915
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 50690899593826888, guid: 0856c910adfb9dd4c86d2c0f6a9fea9f,
+        type: 2}
+      propertyPath: m_UseAutoMass
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50690899593826888, guid: 0856c910adfb9dd4c86d2c0f6a9fea9f,
+        type: 2}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50690899593826888, guid: 0856c910adfb9dd4c86d2c0f6a9fea9f,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114937310921597850, guid: 0856c910adfb9dd4c86d2c0f6a9fea9f,
+        type: 2}
+      propertyPath: jumpPower
+      value: 20
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114826533271833692, guid: 0856c910adfb9dd4c86d2c0f6a9fea9f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0856c910adfb9dd4c86d2c0f6a9fea9f, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &423192925

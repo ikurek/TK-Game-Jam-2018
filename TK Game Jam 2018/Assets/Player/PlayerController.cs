@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour {
 
     float moveSpeed = 10.0f;
     public bool grounded = true;
-    public float jumpPower = 2.0f;
+    public float jumpPower = 20.0f;
     Vector2 velocity;
 
 
