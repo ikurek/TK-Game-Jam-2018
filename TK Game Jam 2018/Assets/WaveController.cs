@@ -40,10 +40,13 @@ public class WaveController : MonoBehaviour {
 
     private SpriteRenderer spr;
 
+	private Animator myAnim;
+
     private void Start()
     {
         spr = gameObject.GetComponent<SpriteRenderer>();
         spr.enabled = false;
+		myAnim = gameObject.GetComponentInParent<Animator> ();
     }
 
     void Update()
@@ -52,6 +55,7 @@ public class WaveController : MonoBehaviour {
         if ((Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.V)) && enableWave)
         {
             playerAudioSrc.Play();
+			myAnim.SetTrigger ("ignite");
             if(Input.GetKey(KeyCode.C))spr.sprite = waveRed;
             if (Input.GetKey(KeyCode.V)) spr.sprite = waveBlue;
             resetWaveDimension();
