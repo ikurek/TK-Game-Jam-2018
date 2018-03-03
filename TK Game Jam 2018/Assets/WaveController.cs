@@ -35,6 +35,8 @@ public class WaveController : MonoBehaviour {
     private static Dictionary<int, IEnumerator> hashMapCoroutineIn = new Dictionary<int, IEnumerator>();
     private static Dictionary<int, IEnumerator> hashMapCoroutineOut = new Dictionary<int, IEnumerator>();
 
+	public AudioSource playerAudioSrc;
+
     private void Start()
     {
         spr = gameObject.GetComponent<SpriteRenderer>();
@@ -46,13 +48,18 @@ public class WaveController : MonoBehaviour {
         
         if (Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.V))
         {
+			playerAudioSrc.Play ();
             if(Input.GetKey(KeyCode.C))spr.sprite = waveRed;
             if (Input.GetKey(KeyCode.V)) spr.sprite = waveBlue;
             resetWaveDimension();
             clap = true;
             spr.enabled = true;
         }
-        if(clap)SendClapWave(); 
+		if (clap) {
+			SendClapWave ();
+
+		}
+
     }
 
     /*private IEnumerator ReenableWave()
