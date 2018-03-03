@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TestTilses : MonoBehaviour {
-	GameObject TileMap;
+	
 	// Use this for initialization
 	void Start () {
 		
@@ -13,7 +13,5 @@ public class TestTilses : MonoBehaviour {
 	void Update () {
 		
 	}
-	void OnMouseDown(){
-		Destroy (TileMap);
-	}
+
 }
