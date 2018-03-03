@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212519107791906292}
   - component: {fileID: 58213190534626624}
   - component: {fileID: 114796836215408074}
+  - component: {fileID: 114728595876797586}
   m_Layer: 0
   m_Name: wave
   m_TagString: Untagged
@@ -58,7 +59,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4560164909502940}
   - component: {fileID: 61525268420661314}
-  - component: {fileID: 114728595876797586}
+  - component: {fileID: 114072728349349616}
   m_Layer: 0
   m_Name: groundChecker
   m_TagString: Things
@@ -224,7 +225,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.03, y: -1.21}
   serializedVersion: 2
-  m_Radius: 0.15
+  m_Radius: 0.16
 --- !u!61 &61525268420661314
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -262,7 +263,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.029205322, y: -0.3429132}
+  m_Offset: {x: -0.029205322, y: -0.32044053}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -273,7 +274,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.31147957, y: 1.6987017}
+  m_Size: {x: 0.31147957, y: 1.7591157}
   m_EdgeRadius: 0
 --- !u!81 &81843344326509834
 AudioListener:
@@ -282,6 +283,17 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1923814782959426}
   m_Enabled: 1
+--- !u!114 &114072728349349616
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1416057345036948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4c8bb0d05ec4de48bcb82630af1b8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114462563119044494
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -308,6 +320,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6578adba22c964116977185c1b4f5045, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waveVelocity: 0.2
+  initialWaveDimension: 0.01
+  maxWaveDimension: 8
+  delayFadeOut: 0.3
+  velocityFadeOut: 0.1
+  delayFadeIn: 0
+  velocityFadeIn: 0.2
+  waveFadeOutVelocity: 0.022
+  waveRed: {fileID: 0}
+  waveBlue: {fileID: 0}
 --- !u!114 &114796836215408074
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -326,6 +348,7 @@ MonoBehaviour:
   velocityFadeOut: 0.001
   delayFadeIn: 0
   velocityFadeIn: 0.001
+  waveFadeOutVelocity: 0.022
   waveRed: {fileID: 21300000, guid: c625ec56a33d9aa40ac5a023f25da394, type: 3}
   waveBlue: {fileID: 21300000, guid: fef9c3f3ca726466fa0709a43600a9c8, type: 3}
 --- !u!124 &124914104593241152
