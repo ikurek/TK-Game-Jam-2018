@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4252360851626884}
   - component: {fileID: 212519107791906292}
-  - component: {fileID: 58321821181034894}
-  - component: {fileID: 114454388329414934}
+  - component: {fileID: 58213190534626624}
+  - component: {fileID: 114796836215408074}
   m_Layer: 0
   m_Name: wave
   m_TagString: Untagged
@@ -40,7 +40,8 @@ GameObject:
   - component: {fileID: 212241790140414294}
   - component: {fileID: 50690899593826888}
   - component: {fileID: 61712790407481296}
-  - component: {fileID: 114144937782661768}
+  - component: {fileID: 114462563119044494}
+  - component: {fileID: 58690072833847462}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -194,7 +195,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &58321821181034894
+--- !u!58 &58213190534626624
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -209,6 +210,21 @@ CircleCollider2D:
   m_Offset: {x: -0.0018405914, y: 0}
   serializedVersion: 2
   m_Radius: 0.46572208
+--- !u!58 &58690072833847462
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1214539804314466}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03, y: -1.21}
+  serializedVersion: 2
+  m_Radius: 0.15
 --- !u!61 &61525268420661314
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -221,7 +237,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.030969858, y: -1.3339953}
+  m_Offset: {x: -0.032896757, y: -1.3389974}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -232,7 +248,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.32329512, y: 0.20659256}
+  m_Size: {x: 0.30190134, y: 0.047021866}
   m_EdgeRadius: 0
 --- !u!61 &61712790407481296
 BoxCollider2D:
@@ -246,7 +262,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03815484, y: -0.39265752}
+  m_Offset: {x: -0.029205322, y: -0.3429132}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -257,7 +273,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.832788, y: 1.9035497}
+  m_Size: {x: 0.31147957, y: 1.6987017}
   m_EdgeRadius: 0
 --- !u!81 &81843344326509834
 AudioListener:
@@ -266,7 +282,7 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1923814782959426}
   m_Enabled: 1
---- !u!114 &114144937782661768
+--- !u!114 &114462563119044494
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -277,11 +293,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32bc38b0137ec7d4fb6a6f363e470a09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 30
+  moveSpeed: 20
   grounded: 1
   isRight: 1
-  jumpPower: 30
---- !u!114 &114454388329414934
+  jumpPower: 10
+--- !u!114 &114728595876797586
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1023941223505822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6578adba22c964116977185c1b4f5045, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114796836215408074
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -301,17 +328,6 @@ MonoBehaviour:
   velocityFadeIn: 0.001
   waveRed: {fileID: 21300000, guid: c625ec56a33d9aa40ac5a023f25da394, type: 3}
   waveBlue: {fileID: 21300000, guid: fef9c3f3ca726466fa0709a43600a9c8, type: 3}
---- !u!114 &114728595876797586
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1416057345036948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4c8bb0d05ec4de48bcb82630af1b8d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!124 &124914104593241152
 Behaviour:
   m_ObjectHideFlags: 1
