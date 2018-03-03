@@ -788,6 +788,12 @@ MonoBehaviour:
   waveVelocity: 0.2
   initialWaveDimension: 0
   maxWaveDimension: 8
+  delayFadeOut: 0.3
+  velocityFadeOut: 0.1
+  delayFadeIn: 0
+  velocityFadeIn: 0.2
+  waveRed: {fileID: 21300000, guid: c625ec56a33d9aa40ac5a023f25da394, type: 3}
+  waveBlue: {fileID: 21300000, guid: fef9c3f3ca726466fa0709a43600a9c8, type: 3}
 --- !u!58 &2063961480
 CircleCollider2D:
   m_ObjectHideFlags: 0
