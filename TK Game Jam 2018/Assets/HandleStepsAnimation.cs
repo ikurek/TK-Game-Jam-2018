@@ -9,6 +9,6 @@ public class HandleStepsAnimation : MonoBehaviour {
 		sp.PlayStepSound ();
 	}
 	public void SetIsInFirstSceneToFalse(){
-		gameObject.GetComponent<Animator> ().SetBool("isFirstScene",false);
+		sp.gameObject.GetComponentInParent<Animator> ().SetBool("isFirstScene",false);
 	}
 }
