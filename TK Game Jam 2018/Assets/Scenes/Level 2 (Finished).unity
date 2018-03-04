@@ -47400,12 +47400,12 @@ Prefab:
     - target: {fileID: 61957545844554396, guid: 61afddeb5fa656e469bc24a5bde55f55,
         type: 2}
       propertyPath: m_Offset.x
-      value: -0.8747941
+      value: 0.11095023
       objectReference: {fileID: 0}
     - target: {fileID: 61957545844554396, guid: 61afddeb5fa656e469bc24a5bde55f55,
         type: 2}
       propertyPath: m_Size.x
-      value: 2.8995883
+      value: 5.6150346
       objectReference: {fileID: 0}
     - target: {fileID: 3664157344115069406, guid: 61afddeb5fa656e469bc24a5bde55f55,
         type: 2}
@@ -47637,7 +47637,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -643444104
+  randomSeed: -1062978840
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -51471,7 +51471,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 678396682
+  randomSeed: 2136995646
   InitialModule:
     serializedVersion: 3
     enabled: 1
