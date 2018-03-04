@@ -52,12 +52,12 @@ public class WaveController : MonoBehaviour {
     void Update()
     {
         
-        if ((Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.V)) && enableWave)
+        if ((Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.Mouse1)) && enableWave)
         {
             playerAudioSrc.Play();
 			myAnim.SetTrigger ("ignite");
-            if(Input.GetKey(KeyCode.C))spr.sprite = waveRed;
-            if (Input.GetKey(KeyCode.V)) spr.sprite = waveBlue;
+            if(Input.GetKey(KeyCode.Mouse0))spr.sprite = waveRed;
+            if (Input.GetKey(KeyCode.Mouse1)) spr.sprite = waveBlue;
             resetWaveDimension();
             clap = true;
             spr.enabled = true;

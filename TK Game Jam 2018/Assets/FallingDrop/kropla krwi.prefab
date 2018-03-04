@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   decresedSpeed: 3
-  decresedSpeedTime: 4
+  decresedSpeedTime: 1.5
 --- !u!212 &212367849947373402
 SpriteRenderer:
   m_ObjectHideFlags: 1
