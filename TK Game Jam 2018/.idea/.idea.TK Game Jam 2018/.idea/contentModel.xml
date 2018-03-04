@@ -130,6 +130,7 @@
             <e p="WaypointProgressTracker.cs" t="Include" />
           </e>
         </e>
+        <e p="StartGame.cs" t="Include" />
         <e p="StepsPlayer.cs" t="Include" />
         <e p="TrapController.cs" t="Include" />
         <e p="WaveController.cs" t="Include" />
