@@ -18,6 +18,7 @@ public class SkeletonController : MonoBehaviour {
 		if(collision.collider.tag == "Player") {
 			gameObject.GetComponentInChildren<ParticleSystem>().Play();
 			gameObject.GetComponent<AudioSource>().Play();
+            Debug.Log("wywalilo krrewww");
 		}
 	}
 
