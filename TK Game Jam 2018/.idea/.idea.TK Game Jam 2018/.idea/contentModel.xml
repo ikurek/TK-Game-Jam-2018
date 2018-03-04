@@ -7,7 +7,6 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Dupaskrypt.cs" t="Include" />
-<<<<<<< HEAD
         <e p="EffectExamples" t="Include">
           <e p="Shared" t="Include">
             <e p="Scripts" t="Include">
@@ -42,20 +41,25 @@
             </e>
           </e>
         </e>
+        <e p="FallingDrop" t="Include">
+          <e p="DropController.cs" t="Include" />
+          <e p="DropRenderer.cs" t="Include" />
+        </e>
+        <e p="HandleStepsAnimation.cs" t="Include" />
         <e p="Karol Scripts" t="Include">
           <e p="FinishScript.cs" t="Include" />
-=======
-        <e p="Karol Scripts" t="Include">
           <e p="LevelManager.cs" t="Include" />
           <e p="Loader.cs" t="Include" />
->>>>>>> master
         </e>
+        <e p="LoadNextLevel" t="Include">
+          <e p="Fading.cs" t="Include" />
+          <e p="SwitchLevelTrigger.cs" t="Include" />
+        </e>
+        <e p="ParticleColliderController.cs" t="Include" />
         <e p="Player" t="Include">
           <e p="Platformer2DUserControl.cs" t="Include" />
           <e p="PlatformerCharacter2D.cs" t="Include" />
         </e>
-<<<<<<< HEAD
-=======
         <e p="Plugins" t="Include">
           <e p="Editor" t="Include">
             <e p="JetBrains" t="Include">
@@ -63,8 +67,9 @@
             </e>
           </e>
         </e>
->>>>>>> master
         <e p="PrefabTile.cs" t="Include" />
+        <e p="SkeletonController.cs" t="Include" />
+        <e p="SoundtrackPlayer.cs" t="Include" />
         <e p="Standard Assets" t="Include">
           <e p="2D" t="Include">
             <e p="Scripts" t="Include">
@@ -125,6 +130,7 @@
             <e p="WaypointProgressTracker.cs" t="Include" />
           </e>
         </e>
+        <e p="StepsPlayer.cs" t="Include" />
         <e p="TrapController.cs" t="Include" />
         <e p="WaveController.cs" t="Include" />
       </e>
@@ -136,6 +142,6 @@
       </e>
       <e p="TK Game Jam 2018.sln" t="IncludeFlat" />
     </e>
-    <e p="$USER_HOME$/Library/Caches/Rider2017.3/resharper-host/local/Transient/ReSharperHost/v11/SolutionCaches/_TK Game Jam 2018.290524642.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2017.3/resharper-host/local/Transient/ReSharperHost/v11/SolutionCaches/_TK Game Jam 2018.-1952744484.00" t="ExcludeRecursive" />
   </component>
 </project>

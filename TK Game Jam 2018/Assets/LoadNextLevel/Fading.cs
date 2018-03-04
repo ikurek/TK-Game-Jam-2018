@@ -9,7 +9,13 @@ public class Fading : MonoBehaviour {
     private int drawDepth = -1000;
     private float alpha = 1.0f;
     private int fadeDir = -1;
+    private AudioSource audio;
 
+    void Awake()
+    {
+        audio = gameObject.GetComponent<AudioSource>();
+    }
+    
     private void OnGUI()
     {
         alpha += fadeDir * fadeSpeed * Time.deltaTime;
@@ -21,12 +27,16 @@ public class Fading : MonoBehaviour {
 
     public float BeginFade(int direction)
     {
+        audio.Play();
         fadeDir = direction;
         return fadeSpeed;
     }
 
     private void OnLevelWasLoaded(int level)
     {
+        
         BeginFade(-1);
     }
+    
+    
 }

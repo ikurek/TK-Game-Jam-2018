@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/Level 2 (Finished).unity
-=======
-- path: Assets/Scenes/Level4.unity
->>>>>>> adams2
+- path: Assets/Scenes/Level 4 (Finished).unity
   isLoaded: 1
   isActive: 1
