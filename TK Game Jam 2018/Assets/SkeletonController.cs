@@ -14,4 +14,11 @@ public class SkeletonController : MonoBehaviour {
 		
 	}
 
+	void OnCollisionEnter2D(Collision2D collision) {
+		if(collision.collider.tag == "Player") {
+			gameObject.GetComponentInChildren<ParticleSystem>().Play();
+			gameObject.GetComponent<AudioSource>().Play();
+		}
+	}
+
 }

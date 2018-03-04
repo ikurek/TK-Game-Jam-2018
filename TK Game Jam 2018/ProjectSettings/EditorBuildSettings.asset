@@ -5,15 +5,27 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/shitty scene.unity
-    guid: 9f04a55de51214ec4b14388858586124
   - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/43ed41e913c844ffb95b9ca5c9c58b86
-    guid: 43ed41e913c844ffb95b9ca5c9c58b86
-  - enabled: 1
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Scenes/Level1.unity
     guid: c0d9f97e1c0aa4b19acd58208471c04d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level2.unity
     guid: 17882097271971d41beba62471711aa2
+  - enabled: 1
+    path: Assets/Scenes/Level 1 (Finished).unity
+    guid: a7474916f7afbb04896d3e00d8829aa5
+  - enabled: 1
+    path: Assets/Scenes/Level 3 (Finished).unity
+    guid: 35309ef28a48bcd4d8642bd5ec268959
+  - enabled: 1
+    path: Assets/Scenes/Level 2 (Finished).unity
+    guid: 97e1314f3bb91244d87ee43d44e76488
+  - enabled: 1
+    path: Assets/Scenes/Level 4 (Finished).unity
+    guid: f026b60d8ceeb1443997075b874c0127
