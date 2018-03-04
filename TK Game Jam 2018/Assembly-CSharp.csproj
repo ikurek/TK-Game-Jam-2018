@@ -70,6 +70,8 @@
      <Compile Include="Assets\Karol Scripts\FinishScript.cs" />
      <Compile Include="Assets\Karol Scripts\LevelManager.cs" />
      <Compile Include="Assets\Karol Scripts\Loader.cs" />
+     <Compile Include="Assets\LoadNextLevel\Fading.cs" />
+     <Compile Include="Assets\LoadNextLevel\SwitchLevelTrigger.cs" />
      <Compile Include="Assets\ParticleColliderController.cs" />
      <Compile Include="Assets\Player\Platformer2DUserControl.cs" />
      <Compile Include="Assets\Player\PlatformerCharacter2D.cs" />
