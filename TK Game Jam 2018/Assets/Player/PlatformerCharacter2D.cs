@@ -13,7 +13,7 @@ namespace UnityStandardAssets._2D
 
         private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
         const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
-        private bool m_Grounded;            // Whether or not the player is grounded.
+        [SerializeField]private bool m_Grounded;            // Whether or not the player is grounded.
         private Transform m_CeilingCheck;   // A position marking where to check for ceilings
         const float k_CeilingRadius = .01f; // Radius of the overlap circle to determine if the player can stand up
         private Animator m_Anim;            // Reference to the player's animator component.
@@ -54,7 +54,7 @@ namespace UnityStandardAssets._2D
             Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
             for (int i = 0; i < colliders.Length; i++)
             {
-                if (colliders[i].gameObject != gameObject)
+                if (colliders[i].gameObject != gameObject && !colliders[i].isTrigger)
                     m_Grounded = true;
             }
             m_Anim.SetBool("Ground", m_Grounded);
