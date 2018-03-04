@@ -12,6 +12,7 @@ public class SwitchLevelTrigger : MonoBehaviour
 		if (col.gameObject.tag == "Player")
 		{
             float fadeTime = GameObject.Find("_GM").GetComponent<Fading>().BeginFade(1);
+            GameObject.Find("_GM").GetComponent<Fading>().fadeOutTexture = GameObject.Find("_GM").GetComponent<Fading>().nextTexture;
             StartCoroutine(LoadNextScene(fadeTime));
 		}
 	}
