@@ -471,7 +471,7 @@ Prefab:
     - target: {fileID: 114239967952144344, guid: 8d9b58aa7e13842c1b6b243d92e1627b,
         type: 2}
       propertyPath: dropDelay
-      value: 1.76
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4017032665293382, guid: 8d9b58aa7e13842c1b6b243d92e1627b, type: 2}
       propertyPath: m_LocalScale.y
