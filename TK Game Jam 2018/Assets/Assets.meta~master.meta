@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 2e2e9623c54948f4d9f9b244d6d77634
 timeCreated: 1520121104
+=======
+guid: e8654fb9bbbe543f6931b826f4c22ff9
+timeCreated: 1520123925
+>>>>>>> Maciek
 licenseType: Free
 DefaultImporter:
   externalObjects: {}
