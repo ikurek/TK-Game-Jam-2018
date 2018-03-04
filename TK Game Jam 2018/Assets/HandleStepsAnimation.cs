@@ -8,4 +8,7 @@ public class HandleStepsAnimation : MonoBehaviour {
 	public void PlaySound(){
 		sp.PlayStepSound ();
 	}
+	public void SetIsInFirstSceneToFalse(){
+		gameObject.GetComponent<Animator> ().SetBool("isFirstScene",false);
+	}
 }
