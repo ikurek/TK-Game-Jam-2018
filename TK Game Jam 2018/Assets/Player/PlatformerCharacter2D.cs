@@ -20,6 +20,21 @@ namespace UnityStandardAssets._2D
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 
+        public void setMaxSpeed(float speed) {
+            this.m_MaxSpeed = speed;
+        }
+
+        public float getMaxSpeed() {
+            return m_MaxSpeed;
+        }
+
+        public void setJumpForce(float jumpForce) {
+            this.m_JumpForce = jumpForce;
+        }
+
+        public float getJumpForce() {
+            return m_JumpForce;
+        }
         private void Awake()
         {
             // Setting up references.
