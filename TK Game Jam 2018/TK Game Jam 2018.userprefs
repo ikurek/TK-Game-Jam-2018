@@ -4,8 +4,8 @@
     <Files>
       <File FileName="Assets/SoundtrackPlayer.cs" Line="9" Column="39" />
       <File FileName="Assets/WaveController.cs" Line="1" Column="1" />
-      <File FileName="Assets/StepsPlayer.cs" Line="20" Column="22" />
-      <File FileName="Assets/HandleStepsAnimation.cs" Line="1" Column="1" />
+      <File FileName="Assets/StepsPlayer.cs" Line="19" Column="1" />
+      <File FileName="Assets/HandleStepsAnimation.cs" Line="9" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
