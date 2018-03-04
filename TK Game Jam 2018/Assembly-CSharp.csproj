@@ -76,6 +76,7 @@
      <Compile Include="Assets\PrefabTile.cs" />
      <Compile Include="Assets\SkeletonController.cs" />
      <Compile Include="Assets\SoundtrackPlayer.cs" />
+     <Compile Include="Assets\StepsPlayer.cs" />
      <Compile Include="Assets\TrapController.cs" />
      <Compile Include="Assets\WaveController.cs" />
      <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
