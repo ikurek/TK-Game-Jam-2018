@@ -279,6 +279,11 @@ Prefab:
       propertyPath: orthographic
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114899863052688786, guid: c34f89f47e210af44ade29e9a4a06b84,
+        type: 2}
+      propertyPath: damping
+      value: 0.15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c34f89f47e210af44ade29e9a4a06b84, type: 2}
   m_IsPrefabParent: 0

@@ -160,16 +160,16 @@ Prefab:
     - target: {fileID: 82532465366228098, guid: 31740386425a540548dcad1a781adcd0,
         type: 2}
       propertyPath: m_Volume
-      value: 0.104
+      value: 0.305
+      objectReference: {fileID: 0}
+    - target: {fileID: 82532465366228098, guid: 31740386425a540548dcad1a781adcd0,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31740386425a540548dcad1a781adcd0, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &176756937 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4769225035927376, guid: 1dae4552d3af6a14192a1b1ca7e20b11,
-    type: 2}
-  m_PrefabInternal: {fileID: 722975125}
 --- !u!1001 &701086831
 Prefab:
   m_ObjectHideFlags: 0
@@ -366,6 +366,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1dae4552d3af6a14192a1b1ca7e20b11, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &722975126 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4769225035927376, guid: 1dae4552d3af6a14192a1b1ca7e20b11,
+    type: 2}
+  m_PrefabInternal: {fileID: 722975125}
 --- !u!1 &1938609990
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,8 +401,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d8238cc53530b64fbb7828c3d3bb591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 176756937}
-  damping: 1
+  target: {fileID: 722975126}
+  damping: 0.15
   lookAheadFactor: 3
   lookAheadReturnSpeed: 0.5
   lookAheadMoveThreshold: 0.1

@@ -47637,6 +47637,11 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: a609a451f9399420a9a7375de23c1890, type: 2}
+    - target: {fileID: 82087821035659200, guid: 1dae4552d3af6a14192a1b1ca7e20b11,
+        type: 2}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1dae4552d3af6a14192a1b1ca7e20b11, type: 2}
   m_IsPrefabParent: 0
@@ -47908,6 +47913,11 @@ Prefab:
         type: 2}
       propertyPath: orthographic
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114281645778929784, guid: 68d208c77ae08404c8751c0b65221653,
+        type: 2}
+      propertyPath: damping
+      value: 0.15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 68d208c77ae08404c8751c0b65221653, type: 2}
