@@ -1,7 +1,11 @@
 fileFormatVersion: 2
 guid: 2036003c091e94ac894cb941861895c2
 folderAsset: yes
+<<<<<<< HEAD
 timeCreated: 1520121104
+=======
+timeCreated: 1520110720
+>>>>>>> Maciek
 licenseType: Free
 DefaultImporter:
   externalObjects: {}
