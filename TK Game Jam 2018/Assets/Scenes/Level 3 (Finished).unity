@@ -10345,7 +10345,7 @@ Prefab:
         type: 2}
       propertyPath: fadeOutTexture
       value: 
-      objectReference: {fileID: 2800000, guid: ec0cb375dd4d55946a8e51456a9417ae, type: 3}
+      objectReference: {fileID: 2800000, guid: c73051f37f4be4eaa92ef786b39a35a5, type: 3}
     - target: {fileID: 82049928195735030, guid: 50b86afe31703324c81722fa4abd9305,
         type: 2}
       propertyPath: spreadCustomCurve.m_RotationOrder
@@ -10356,6 +10356,11 @@ Prefab:
       propertyPath: fadeSpeed
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114492477945574322, guid: 50b86afe31703324c81722fa4abd9305,
+        type: 2}
+      propertyPath: nextTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 4f42f90464760466497f3eb7e7be7a44, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 50b86afe31703324c81722fa4abd9305, type: 2}
   m_IsPrefabParent: 0
